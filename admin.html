@@ -1,39 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin panel</title>
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=roboto:wght@100;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="admin.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Portal</title>
+
+    <!-- Font Awesome & Google Fonts -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <style>
+        /* ---------- RESET ---------- */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+          display: flex;
+          min-height: 100vh;
+          background-color: #121212;
+          color: #fff;
+        }
+
+        /* ---------- SIDEBAR ---------- */
+        .side-nav {
+          width: 250px;
+          background-color: #1e1e1e;
+          padding-top: 30px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
+          transition: all 0.3s ease;
+          overflow-y: auto;
+        }
+
+        .side-nav .logo {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .side-nav .logo img {
+          width: 120px;
+          border-radius: 50%;
+        }
+
+        .side-nav a {
+          display: flex;
+          align-items: center;
+          padding: 14px 25px;
+          color: #bbb;
+          text-decoration: none;
+          font-size: 15px;
+          transition: all 0.2s ease;
+        }
+
+        .side-nav a:hover {
+          background-color: #272727;
+          color: #00bcd4;
+        }
+
+        .side-nav a i {
+          margin-right: 12px;
+          width: 20px;
+          text-align: center;
+        }
+
+        .side-nav a.active {
+          background-color: #00bcd4;
+          color: #fff;
+        }
+
+        /* ---------- HEADER ---------- */
+        header {
+          position: fixed;
+          top: 0;
+          left: 250px;
+          width: calc(100% - 250px);
+          background-color: #1a1a1a;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px 25px;
+          z-index: 10;
+          transition: all 0.3s ease;
+        }
+
+        header h3 {
+          color: #00bcd4;
+          letter-spacing: 1px;
+          font-weight: 500;
+        }
+
+        .menu-btn {
+          font-size: 24px;
+          cursor: pointer;
+          color: #00bcd4;
+          display: none;
+        }
+
+        /* ---------- MAIN CONTENT ---------- */
+        .main-content {
+          margin-left: 250px;
+          padding: 100px 30px 30px;
+          width: 100%;
+          transition: all 0.3s ease;
+        }
+
+        .main-content h1 {
+          color: #00bcd4;
+          margin-bottom: 15px;
+          font-size: 28px;
+        }
+
+        .main-content p {
+          color: #ccc;
+          line-height: 1.6;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+          .side-nav {
+            left: -250px;
+          }
+
+          .side-nav.active {
+            left: 0;
+          }
+
+          header {
+            left: 0;
+            width: 100%;
+          }
+
+          .menu-btn {
+            display: block;
+          }
+
+          .main-content {
+            margin-left: 0;
+          }
+        }
+    </style>
 </head>
+
 <body>
- <input type="checkbox" id="check">
-
- <header>
-    <label for="check">
-       
-    </label>
-    <div class="left_side">
-        <h3>ADMIN PORTAL</h3>
-
-    </div>
- </header>
- <div class="side-nav">
+<div class="side-nav" id="sidebar">
     <div class="logo">
-        <img src="LOGOO-removebg-preview.png" alt="project logo" class="image">
-
+        <img src="LOGOO-removebg-preview.png" alt="Project Logo" />
     </div>
-    <a href="#"><i class="fa fa-home"> <span>Home</span></i></a>
-    <a href="#"><i class="fa fa-users"> <span>Users</span></i></a>
-    <a href="#"><i class="fa fa-subscription-plans"> <span>Subscription plans</span></i></a>
-    <a href="#"><i class="fa fa-Payment"> <span>Payment</span></i></a>
-    <a href="#"><i class="fa fa-info"> <span>feedbacks</span></i></a>
-    <a href="#"><i class="fa fa-desktop"> <span>fa-desktop</span></i></a>
- </div>
+    <a href="#" class="active"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="#"><i class="fa fa-users"></i><span>Users</span></a>
+    <a href="#"><i class="fa fa-list-alt"></i><span>Subscription Plans</span></a>
+    <a href="#"><i class="fa fa-credit-card"></i><span>Payments</span></a>
+    <a href="#"><i class="fa fa-comment-dots"></i><span>Feedbacks</span></a>
+    <a href="#"><i class="fa fa-desktop"></i><span>Dashboard</span></a>
+</div>
 
-    <div class="banner"></div>
+<header>
+    <i class="fa fa-bars menu-btn" id="menuBtn"></i>
+    <h3>ADMIN PORTAL</h3>
+</header>
+
+<div class="main-content">
+    <h1>Welcome to Admin Dashboard</h1>
+    <p>
+        This is your admin control panel where you can manage users, monitor
+        payments, and view feedbacks. The layout is fully responsive — try resizing
+        the window or open on your phone to see the sidebar toggle!
+    </p>
+</div>
+
+<script>
+    // Toggle sidebar for mobile
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+</script>
 </body>
 </html>

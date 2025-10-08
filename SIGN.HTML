@@ -3,77 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href= "style.css" >
-    <link rel="stylesheet" href= "book.css" >
-    <link rel="stylesheet" href= "about.css" >
-    <link rel="stylesheet" href= "privacy.css">
-    <link rel="stylesheet" href= "login.css">
+    <title>Privacy Policy | Sports League Hub</title>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Page Styles -->
+    <style>
+        /* --- General Reset --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: #121212; color: #e0e0e0; line-height: 1.6; }
+
+        a { color: #00bcd4; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- Header --- */
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #1f1f1f; position: sticky; top: 0; z-index: 1000; }
+        #logo { height: 60px; }
+        .navbar { display: flex; flex-wrap: wrap; gap: 15px; }
+        .navbar a { font-weight: 500; transition: color 0.3s; }
+        .navbar a:hover { color: #00e5ff; }
+
+        /* --- Main Section --- */
+        .main-content { padding: 40px 10%; max-width: 1000px; margin: auto; }
+        .main-content h1 { text-align: center; margin-bottom: 25px; color: #00bcd4; }
+        .main-content h2 { margin-top: 25px; color: #00e5ff; }
+        .main-content h3 { margin-top: 15px; font-weight: 500; }
+        .main-content p { margin: 10px 0; }
+
+        /* --- Buttons --- */
+        .btn5 { display: inline-block; margin: 20px 0; background: #00bcd4; color: #121212; padding: 10px 20px; border-radius: 5px; font-weight: 600; }
+        .btn5 a { color: #121212; }
+        .btn5:hover { background: #00e5ff; }
+
+        /* --- Footer --- */
+        .foot { background-color: #1f1f1f; color: #e0e0e0; padding: 40px 5%; }
+        .row { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; }
+        .col { flex: 1 1 250px; min-width: 230px; }
+        .col h3, .col h1 { color: #00bcd4; margin-bottom: 15px; }
+        .col ul { list-style: none; padding: 0; }
+        .col ul li { margin: 8px 0; }
+        .col ul li a { color: #e0e0e0; transition: color 0.3s; }
+        .col ul li a:hover { color: #00e5ff; }
+        #imfoot { width: 120px; margin-bottom: 15px; }
+        .email-id { color: #00bcd4; margin: 10px 0; }
+        form input[type="email"] { padding: 8px; width: 70%; border: none; border-radius: 4px; margin-bottom: 10px; }
+        form button { padding: 8px 12px; border: none; background-color: #00bcd4; color: #121212; border-radius: 4px; cursor: pointer; }
+        iframe { border-radius: 10px; margin-top: 10px; }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+          .navbar { flex-direction: column; align-items: center; }
+          .row { flex-direction: column; text-align: center; }
+          .col { margin-bottom: 20px; }
+          .main-content { padding: 20px 5%; }
+        }
+    </style>
 </head>
-<body class="bodyofpriv">
+
+<body>
+
+<!-- Header -->
 <header class="header">
-    
-<img id="logo" src="LOGOO-removebg-preview.png"> 
+    <img id="logo" src="LOGOO-removebg-preview.png" alt="Logo">
     <nav class="navbar">
-        <a href="home.html" >HOME</a>
-        <a href="book.html" >BOOK AN APPOINTMENT</a>
-        <a href="ABOUT.HTML" >ABOUT US</a>
-        <a href="CONTACT.HTML" >CONTACT US</a>
-        <a href="privacy.html" >PRIVACY POLICY</a>
-        <a href="login.html" >LOGIN</a>
-        </nav>
-            </header><br><br><br>
+        <a href="home.html">HOME</a>
+        <a href="book.html">BOOK AN APPOINTMENT</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="privacy.html">PRIVACY POLICY</a>
+        <a href="login.html">LOGIN</a>
+    </nav>
+</header>
 
-            <hr>
-
-            <script type="text/javascript" src="https://form.jotform.com/jsform/233327472954462"></script>
-
-            <hr width="100%" size="10px" style="animation: normal;" >
-            <hr>
-<button class="btn5" ><a href="home.html">GO TO HOME</a></button>
 <hr>
 
-            <footer class="foot">
-                <div class="row">
-                    <div class="col">
-                        <img id="imfoot" src="LOGOO-removebg-preview.png">
-                        <p>At Sports League Hub, we are your premier destination for indoor cricket nets, thrilling 8-pool games, and more. 
-                            Our state-of-the-art facilities cater to all skill levels, creating a welcoming sports community. 
-                            Book your slots today, join our vibrant hub, and let your passion for sports thrive with us!</p>
-                   </div>
-                    <div class="col">
-                         <h3>CONTACT INFORMATION</h3>
-                         <p>Shed No. 20, 42 DLF, Industrial Area, Kirti Nagar</p>
-                         <p>New Delhi, Delhi- 110015</p>
-                         <p class="email-id">dhruvkhurana162@gmail.com</p>
-                         <h4>+91-8368799788</h4>
-                   </div>
-                   <div class="col">
-                         <h1 style="margin-left: 20px;">LINKS</h1>
-                         <ul>
-                            <li><a href="home.html">HOME</a></li>
-                            <li><a href="book.html">BOOK A SLOT</a></li>
-                            <li><a href="ABOUT.HTML">ABOUT US</a></li>
-                            <li><a href="privacy.html">PRIVACY POLICY</a></li>
-                            <li><a href="CONTACT.HTML">CONTACTS</a></li>
-                         </ul>             
-                   </div>
-                   <div class="col">
-                            <h3>Latest Offers & Updates</h3>
-                            <form>
-                                <i class="far fa-envelope">
-                                    <input type="email" placeholder="enter your email id" required>
-                                    <button type="submit">&#8608</button>
-                                </i><br>
-                                     </form>
-                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.1514321828618!2d77.13890198110951!3d28.655184120292333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0303ec8bfac3%3A0x21dd624b6879f5b!2s20%2C%2042%2C%20DLE%20Industrial%20Area%2C%20Kirti%20Nagar%2C%20Delhi%2C%20110015!5e0!3m2!1sen!2sin!4v1701271933653!5m2!1sen!2sin" width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                       
-                   </div>
-                   
-            </div>
-            </footer>
-            
-            </body>
-            </html>
-            
+<!-- Form -->
+<script type="text/javascript" src="https://form.jotform.com/jsform/233327472954462"></script>
+
+<!-- Go Home Button -->
+<button class="btn5"><a href="home.html">GO TO HOME</a></button>
+<hr>
+
+<!-- Footer -->
+<footer class="foot">
+    <div class="row">
+        <div class="col">
+            <img id="imfoot" src="LOGOO-removebg-preview.png" alt="Logo">
+            <p>At Sports League Hub, we are your premier destination for indoor cricket nets, thrilling 8-pool games, and more.
+                Our state-of-the-art facilities cater to all skill levels, creating a welcoming sports community.
+                Book your slots today, join our vibrant hub, and let your passion for sports thrive with us!</p>
+        </div>
+
+        <div class="col">
+            <h3>CONTACT INFORMATION</h3>
+            <p>Shed No. 20, 42 DLF, Industrial Area, Kirti Nagar</p>
+            <p>New Delhi, Delhi- 110015</p>
+            <p class="email-id">dhruvkhurana162@gmail.com</p>
+            <h4>+91-8368799788</h4>
+        </div>
+
+        <div class="col">
+            <h1>LINKS</h1>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="book.html">BOOK A SLOT</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+            </ul>
+        </div>
+
+        <div class="col">
+            <h3>Latest Offers & Updates</h3>
+            <form>
+                <input type="email" placeholder="enter your email id" required>
+                <button type="submit">&#8608;</button>
+            </form>
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.1514321828618!2d77.13890198110951!3d28.655184120292333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0303ec8bfac3%3A0x21dd624b6879f5b!2s20%2C%2042%2C%20DLE%20Industrial%20Area%2C%20Kirti%20Nagar%2C%20Delhi%2C%20110015!5e0!3m2!1sen!2sin!4v1701271933653!5m2!1sen!2sin"
+                    width="250" height="100" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

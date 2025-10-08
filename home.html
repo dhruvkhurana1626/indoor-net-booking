@@ -3,176 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href= "style.css" >
-    
+    <title>Sports League Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {margin:0; padding:0; box-sizing:border-box; font-family:"Poppins", sans-serif;}
+        body {background:#f7f7f7; color:#222; line-height:1.6;}
+
+        /* HEADER */
+        .header {
+            display:flex; justify-content:space-between; align-items:center;
+            padding:10px 5%; position:sticky; top:0; z-index:100;
+            background: linear-gradient(to right, #f7f7f7 0%, #222 100%);
+            box-shadow:0 2px 8px rgba(0,0,0,0.2);
+        }
+        #logo {height:60px;}
+        .navbar a {
+            color:white; text-decoration:none; margin:0 15px; font-weight:500;
+            transition:0.3s; position:relative;
+        }
+        .navbar a::after {
+            content:""; position:absolute; width:0; height:2px; left:0; bottom:-3px;
+            background:#f5b400; transition:0.3s;
+        }
+        .navbar a:hover::after {width:100%;}
+        .navbar a:hover {color:#f5b400;}
+
+        /* HERO SECTION */
+        #hero {
+            position:relative; text-align:center; color:white;
+            background:url('sports-league-hub-1.jpg') center/cover no-repeat;
+            height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+        }
+        #hero::before {
+            content:""; position:absolute; top:0; left:0; width:100%; height:100%;
+            background:rgba(0,0,0,0.5);
+        }
+        #hero h1 {position:relative; font-size:3rem; text-shadow:2px 2px 8px #000;}
+        #hero p {position:relative; font-size:1.2rem; margin-top:10px;}
+        .cta-btn {
+            position:relative; margin-top:20px; padding:12px 30px; background:#f5b400; color:#000; font-weight:600;
+            border:none; border-radius:8px; cursor:pointer; text-decoration:none; transition:0.3s;
+        }
+        .cta-btn:hover {background:#222; color:#f5b400;}
+
+        /* FEATURES */
+        .features {
+            display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px;
+            padding:60px 10%; text-align:center;
+        }
+        .feature-card {
+            background:#fff; padding:30px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+        .feature-card:hover {transform:translateY(-10px); box-shadow:0 10px 30px rgba(0,0,0,0.2);}
+        .feature-card img {width:120px; margin-bottom:20px;}
+        .feature-card h3 {margin-bottom:10px; color:#222;}
+        .feature-card p {font-size:0.95rem; color:#555;}
+
+        /* SLOT SECTION */
+        .slots {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px; padding:50px 10%; text-align:center;}
+        .slot-card {background:#fff; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1); padding:20px; transition:0.3s;}
+        .slot-card:hover {transform:translateY(-8px); box-shadow:0 10px 30px rgba(0,0,0,0.2);}
+        .slot-card img {width:100%; border-radius:10px; height:180px; object-fit:cover;}
+        .slot-card button {margin-top:10px; padding:10px 20px; border:none; border-radius:6px; background:#f5b400; color:#000; cursor:pointer; transition:0.3s;}
+        .slot-card button:hover {background:#222; color:#f5b400;}
+
+        /* FOOTER */
+        footer {background:#222; color:white; padding:50px 5%;}
+        .row {display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px;}
+        .col h3 {margin-bottom:15px; color:#f5b400;}
+        .col p, .col li {font-size:0.9rem;}
+        ul {list-style:none; padding:0;}
+        ul li a {text-decoration:none; color:white; transition:0.3s;}
+        ul li a:hover {color:#f5b400;}
+        #imfoot {width:120px; margin-bottom:15px;}
+        form input {padding:6px; width:70%; border-radius:5px; border:none; margin-right:5px;}
+        form button {padding:6px 10px; border:none; background:#f5b400; color:black; border-radius:5px; cursor:pointer;}
+
+        /* RESPONSIVE */
+        @media (max-width:768px) {
+            .header {flex-direction:column; align-items:flex-start;}
+            .navbar {display:flex; flex-wrap:wrap; justify-content:center; gap:10px;}
+            #hero h1 {font-size:2rem;}
+            .features, .slots {padding:40px 5%;}
+            form input {width:100%; margin-bottom:10px;}
+            form button {width:100%;}
+        }
+    </style>
 </head>
 <body>
+
 <header class="header">
+    <img id="logo" src="LOGOO-removebg-preview.png" alt="Logo">
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="book.html">BOOK</a>
+        <a href="ABOUT.HTML">ABOUT US</a>
+        <a href="CONTACT.HTML">CONTACT</a>
+        <a href="privacy.html">PRIVACY</a>
+        <a href="login.html">LOGIN</a>
+    </nav>
+</header>
 
-<img id="logo" src="LOGOO-removebg-preview.png"> 
+<section id="hero">
+    <h1>Welcome to Sports League Hub</h1>
+    <p>Indoor Cricket Nets & 8-Ball Pool Fun</p>
+    <a href="book.html" class="cta-btn">Book Now</a>
+</section>
 
-<nav class="navbar">
-<a href="home.html" >HOME</a>
-<a href="book.html" >BOOK AN APPOINTMENT</a>
-<a href="ABOUT.HTML" >ABOUT US</a>
-<a href="CONTACT.HTML" >CONTACT US</a>
-<a href="privacy.html" >PRIVACY POLICY</a>
-<a href="login.html" >LOGIN</a>
-</nav>
-    </header><br><br><br>
-<hr>
-<div class="main">
-     <div id="upper">
-       
-        <h1 id="cricket">Cricket Net Practice <br>and Pool Fun Await</h1><br>
-     </div>
-        
-
-     
-     </div>
-
-</div>
-<br><br><br><br><br>
-<div id="threebox">
-
-    <div class="first">
-        <img id="cup" src="pic1-removebg-preview (1).png"></img>
-
-    <h2>Perfect Your Batting in Our Indoor Nets</h2>
-    Begin your cricket journey with essential indoor net practice sessions at Sports League Hub.
-  </div>
-
-    <div class="second">
-        <img id="pool" src="pic2-removebg-preview.png"></img>
-
-    <h2>Classic 8-Ball Poll Showdown Masterclass</h2>
-    Elevate your game to the next level with our 8-Ball Pool Masterclass in Sports League Hub.
-  </div>
-
-    <div class="third">
-        <img id="snack" src="pic6-removebg-preview (1).png"></img>
-
-    <h2>Fueling Your Game at the Sports League Hub Canteen</h2>
-    We understand that sports and recreation go hand in hand with great food and refreshments.
-  </div>
-
-</div>
-<br><br>
-<hr id="hr1">
-<div id="Quality">-- Quality Service</div><br><br>
-
-<div class="slot">
-
-    <div id="ek">
-        <img id="pics" src="1slot.jpg"></img>
-        <p id="heading">ELITE CRICKET CLUB</p>
-        <p id="overs">10 OVERS 200 RS</p>
-        <button class="book"><a href="book.html">BOOK</a></button>
-        
-
+<section class="features">
+    <div class="feature-card">
+        <img src="pic1-removebg-preview (1).png" alt="Cricket">
+        <h3>Cricket Net Practice</h3>
+        <p>Sharpen your batting skills in our indoor nets with expert coaching.</p>
     </div>
-
-    <div id="ek1">
-    <img id="pics" src="cricket-net-practice-1 (1).jpg"></img>
-    <p id="heading">ELITE CRICKET CLUB</p>
-    <p id="overs">10 OVERS 200 RS</p>
-    <button class="book"><a href="book.html">BOOK</a></button>
+    <div class="feature-card">
+        <img src="pic2-removebg-preview.png" alt="Pool">
+        <h3>8-Ball Pool Masterclass</h3>
+        <p>Learn from the best and master the 8-ball pool game.</p>
     </div>
-
-    <div id="ek2">
-        <img id="pics" src="sports-league-hub-1.jpg"></img>
-    <p id="heading">ELITE CRICKET CLUB</p>
-    <p id="overs">10 OVERS 200 RS</p>
-    <button class="book"><a href="book.html">BOOK</a></button>
+    <div class="feature-card">
+        <img src="pic6-removebg-preview (1).png" alt="Canteen">
+        <h3>Sports Hub Canteen</h3>
+        <p>Refresh and fuel up at our canteen with healthy options.</p>
     </div>
+</section>
+
+<section class="slots">
+    <div class="slot-card">
+        <img src="1slot.jpg" alt="Slot1">
+        <p><strong>Elite Cricket Club</strong></p>
+        <p>20 Overs - ₹200</p>
+        <button><a href="book.html">Book</a></button>
     </div>
-
-</div>
-<br><br><br>
-
-<div class="slot">
-
-    <div id="ek3">
-        <img id="pics" src="indoor-cricket-net-practice-1.jpg"></img>
-    <p id="heading">ELITE CRICKET CLUB</p>
-    <p id="overs">10 OVERS 200 RS</p>
-    <button class="book"><a href="book.html">BOOK</a></button>
+    <div class="slot-card">
+        <img src="cricket-net-practice-1 (1).jpg" alt="Slot2">
+        <p><strong>Elite Cricket Club</strong></p>
+        <p>40 Overs - ₹300</p>
+        <button><a href="book.html">Book</a></button>
     </div>
-
-    <div id="ek4">
-        <img id="pics" src="indoor-cricket-net-practice2-1.jpg"></img>
-        <p id="heading">ELITE CRICKET CLUB</p>
-        <p id="overs">10 OVERS 200 RS</p>
-        <button class="book"><a href="book.html">BOOK</a></button>
+    <div class="slot-card">
+        <img src="sports-league-hub-1.jpg" alt="Slot3">
+        <p><strong>Elite Cricket Club</strong></p>
+        <p>60 Overs - ₹500</p>
+        <button><a href="book.html">Book</a></button>
     </div>
+</section>
 
-    <div id="ek5">
-        <img id="pics" src="cric-net-pactice-1.jpg"></img>
-        <p id="heading">ELITE CRICKET CLUB</p>
-        <p id="overs">10 OVERS 200 RS</p>
-        <button class="book"><a href="book.html">BOOK</a></button>
-    </div>
-<br><br><br><hr><br>
-</div>
-
-<div class="gallery">
-    <CENTER><H1 style="color: white;">SPORTS LEAGUE HUB GALLERY</H1></CENTER>
-    <div id="main">
-     
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-<br>
-
-<hr width="100%" size="10px" style="animation: normal;" >
-
-<footer class="foot">
+<footer class="footer">
     <div class="row">
         <div class="col">
-            <img id="imfoot" src="LOGOO-removebg-preview.png">
-            <p>At Sports League Hub, we are your premier destination for indoor cricket nets, thrilling 8-pool games, and more. 
-                Our state-of-the-art facilities cater to all skill levels, creating a welcoming sports community. 
-                Book your slots today, join our vibrant hub, and let your passion for sports thrive with us!</p>
-       </div>
+            <img id="imfoot" src="LOGOO-removebg-preview.png" alt="Logo">
+            <p>At Sports League Hub, we are your premier destination for indoor cricket nets, thrilling 8-ball pool games, and more. Join our vibrant hub today!</p>
+        </div>
         <div class="col">
-             <h3>CONTACT INFORMATION</h3>
-             <p>Shed No. 20, 42 DLF, Industrial Area, Kirti Nagar</p>
-             <p>New Delhi, Delhi- 110015</p>
-             <p class="email-id">dhruvkhurana162@gmail.com</p>
-             <h4>+91-8368799788</h4>
-       </div>
-       <div class="col">
-             <h1 style="margin-left: 20px;">LINKS</h1>
-             <ul>
+            <h3>Contact Information</h3>
+            <p>Shed No. 20, 42 DLF, Industrial Area, Kirti Nagar</p>
+            <p>New Delhi, Delhi-110015</p>
+            <p class="email-id">dhruvkhurana162@gmail.com</p>
+            <h4>+91-8368799788</h4>
+        </div>
+        <div class="col">
+            <h3>Links</h3>
+            <ul>
                 <li><a href="home.html">HOME</a></li>
                 <li><a href="book.html">BOOK A SLOT</a></li>
                 <li><a href="ABOUT.HTML">ABOUT US</a></li>
                 <li><a href="privacy.html">PRIVACY POLICY</a></li>
-                <li><a href="CONTACT.HTML">CONTACTS</a></li>
-             </ul>             
-       </div>
-       <div class="col">
-                <h3>Latest Offers & Updates</h3>
-                <form>
-                    <i class="far fa-envelope">
-                        <input type="email" placeholder="enter your email id" required>
-                        <button type="submit">&#8608</button>
-                    </i><br>
-                         </form>
-                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.1514321828618!2d77.13890198110951!3d28.655184120292333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0303ec8bfac3%3A0x21dd624b6879f5b!2s20%2C%2042%2C%20DLE%20Industrial%20Area%2C%20Kirti%20Nagar%2C%20Delhi%2C%20110015!5e0!3m2!1sen!2sin!4v1701271933653!5m2!1sen!2sin" width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-           
-       </div>
-       
-</div>
+                <li><a href="CONTACT.HTML">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Latest Offers & Updates</h3>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">→</button>
+            </form>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18..." height="120" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
 </footer>
+
+<style>
+    .footer {
+        padding: 50px 5%;
+        /* Gradient starts light at top-left, darker at bottom-right */
+        background: linear-gradient(to bottom right, #f7f7f7 -50%, #222 100%);
+        color: white;
+    }
+    .footer .row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+        gap: 30px;
+    }
+    .footer .col h3 {margin-bottom:15px; color:#f5b400;}
+    .footer .col p, .footer ul li {font-size:0.9rem; color:white;}
+    ul {list-style:none; padding:0;}
+    ul li a {
+        text-decoration:none; color:white; transition:0.3s; position:relative;
+    }
+    ul li a::after {
+        content:""; position:absolute; width:0; height:2px; left:0; bottom:-3px;
+        background:#f5b400; transition:0.3s;
+    }
+    ul li a:hover::after {width:100%;}
+    ul li a:hover {color:#f5b400;}
+    #imfoot {width:120px; margin-bottom:15px;}
+    .footer form input {
+        padding:6px; width:70%; border-radius:5px; border:none; margin-right:5px;
+    }
+    .footer form button {
+        padding:6px 10px; border:none; background:#f5b400; color:black; border-radius:5px; cursor:pointer; transition:0.3s;
+    }
+    .footer form button:hover {background:#222; color:#f5b400;}
+    .footer iframe {margin-top:10px; width:100%; border-radius:10px;}
+    /* Responsive */
+    @media (max-width:768px){
+        .footer .row {text-align:center;}
+        .footer form input {width:100%; margin-bottom:10px;}
+        .footer form button {width:100%;}
+    }
+</style>
 
 </body>
 </html>
