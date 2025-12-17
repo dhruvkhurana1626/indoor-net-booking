@@ -1,2 +1,1 @@
-# College-Project-1
-Created a Website for Online Indoor Cricket Nets Booking. (Front end only using HTML CSS JS)
+Frontend web application for indoor sports net booking using HTML, CSS, and JavaScript forms.
