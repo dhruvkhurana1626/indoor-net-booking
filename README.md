@@ -24,7 +24,7 @@ Built using HTML, CSS, and JavaScript with form handling and basic UI flow.
 
 ## How to Run
 1. Clone the repository
-2. Open `index.html` (or main HTML file) in any browser
+2. Open `Home.html` in any browser
 3. Use the forms to simulate booking flow
 
 ## Note
